@@ -1,0 +1,1703 @@
+{
+	"info": {
+		"_postman_id": "901578e8-baf6-4d65-ad10-e70ae396a2db",
+		"name": "ArwchinSchool",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Tests\" tab**\n\nTests help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/b5f280a7-4b09-48ec-857f-0a7ed99d7ef8/U2NyZWVuc2hvdCAyMDIzLTAzLTI3IGF0IDkuNDcuMjggUE0ucG5n\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) in \"Tests\" to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31705364"
+	},
+	"item": [
+		{
+			"name": "students",
+			"item": [
+				{
+					"name": "getStudentBy_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDY1MzM5NjcsImV4cCI6MTcwNzIyNTE2N30.MBhwYbJTYLs-7nVJLiHzyHwZ8h_feMXbdYVV3BI8xo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/65ae44c03831e49cf240a70a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"65ae44c03831e49cf240a70a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_student",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDY1MzM5NjcsImV4cCI6MTcwNzIyNTE2N30.MBhwYbJTYLs-7nVJLiHzyHwZ8h_feMXbdYVV3BI8xo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login_student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDY1MzM5NjcsImV4cCI6MTcwNzIyNTE2N30.MBhwYbJTYLs-7nVJLiHzyHwZ8h_feMXbdYVV3BI8xo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\": \"pankaj14@gmail.com\",\r\n  \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register_new_Student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDY1MzM5NjcsImV4cCI6MTcwNzIyNTE2N30.MBhwYbJTYLs-7nVJLiHzyHwZ8h_feMXbdYVV3BI8xo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "first",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "last",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "first@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1204535",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "currentClass",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "lastClassPercentage",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "previousSchool",
+									"value": "JNv",
+									"type": "text"
+								},
+								{
+									"key": "parentFirstName",
+									"value": "first",
+									"type": "text"
+								},
+								{
+									"key": "parentLastName",
+									"value": "t",
+									"type": "text"
+								},
+								{
+									"key": "parentEmail",
+									"value": "par@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "parentPhone",
+									"value": "12453",
+									"type": "text"
+								},
+								{
+									"key": "parentGender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "parentRelation",
+									"value": "father",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendOtp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"email\":\"email@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/generate-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"generate-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otpCode\":\"733909\",\r\n    \"newPassword\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDYwODk4MDMsImV4cCI6MTcwNjc4MTAwM30.BJtVSJqRpLR82uOnTmKwyZBV-1CjoGj8kJcyWQ8MFpM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Pankaj\",\r\n    \"lastName\":\"Kushwah\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/update-profile/65ae44c03831e49cf240a70a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"update-profile",
+								"65ae44c03831e49cf240a70a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload_image",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWI3YTVjYTVmN2I0NTNmZjQ3ZjY4ZTMiLCJpYXQiOjE3MDY1MzQzODEsImV4cCI6MTcwNzIyNTU4MX0.cfxwMFa__H94BQKdg31uNDwioxqkvNFXLn0eD37Clec",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/contact.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/upload-image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"upload-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_profile_image",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWI3YTVjYTVmN2I0NTNmZjQ3ZjY4ZTMiLCJpYXQiOjE3MDY1MzQzODEsImV4cCI6MTcwNzIyNTU4MX0.cfxwMFa__H94BQKdg31uNDwioxqkvNFXLn0eD37Clec",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/profile-image/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"profile-image",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_student",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDYwODk4MDMsImV4cCI6MTcwNjc4MTAwM30.BJtVSJqRpLR82uOnTmKwyZBV-1CjoGj8kJcyWQ8MFpM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/delete-student/65b1fdc04d7178b28180ac61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"delete-student",
+								"65b1fdc04d7178b28180ac61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_student",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDY1MzM5NjcsImV4cCI6MTcwNzIyNTE2N30.MBhwYbJTYLs-7nVJLiHzyHwZ8h_feMXbdYVV3BI8xo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/all-students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"all-students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_fees_notification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/65b8da461a3c0129a062ed81/fees/notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"65b8da461a3c0129a062ed81",
+								"fees",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_student_by_class",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentClass\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/class-student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"class-student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_student_by_parent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDY1MzM5NjcsImV4cCI6MTcwNzIyNTE2N30.MBhwYbJTYLs-7nVJLiHzyHwZ8h_feMXbdYVV3BI8xo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"parentEmail\":\"parent@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/student/by-parent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"by-parent"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teachers",
+			"item": [
+				{
+					"name": "register_new_teacher",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxZWNmYzM2NGU1YWE5OGE3ZDZjNTUiLCJpYXQiOjE3MDY1MDk0NTgsImV4cCI6MTcwNzIwMDY1OH0.oK3Khz1uk_jFZzkt1YFQ3aWu08TEKYKJsn0g45YBY-Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Dr. R.",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Sharma",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "teache2111@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "classes",
+									"value": "12,11",
+									"type": "text"
+								},
+								{
+									"key": "qualification",
+									"value": "B.Tech",
+									"type": "text"
+								},
+								{
+									"key": "lastSchool",
+									"value": "JNV",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/a3.png"
+								},
+								{
+									"key": "role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "[]",
+									"type": "text"
+								},
+								{
+									"key": "post",
+									"value": "[\"Math\" , \"Science\"]",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "[\"Math\" , \"Science\"]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login_teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\": \"teacher2@gmail.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_teacher_by_id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxZWNmYzM2NGU1YWE5OGE3ZDZjNTUiLCJpYXQiOjE3MDY1MDk0NTgsImV4cCI6MTcwNzIwMDY1OH0.oK3Khz1uk_jFZzkt1YFQ3aWu08TEKYKJsn0g45YBY-Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/65bb7152a6dacd448904b893",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"65bb7152a6dacd448904b893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send_otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"email\":\"teacheremail@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/generate-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"generate-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify_otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otpCode\":\"341566\",\r\n    \"newPassword\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uplaod_profileImage",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxZWNmYzM2NGU1YWE5OGE3ZDZjNTUiLCJpYXQiOjE3MDYxNTk0NTUsImV4cCI6MTcwNjg1MDY1NX0.00llAx6CiW6y8F29yId7apQco2KBJMqBTsPTsJKrMoE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/a3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/upload-image/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"upload-image",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_profile_Image",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxZWNmYzM2NGU1YWE5OGE3ZDZjNTUiLCJpYXQiOjE3MDYxNTk0NTUsImV4cCI6MTcwNjg1MDY1NX0.00llAx6CiW6y8F29yId7apQco2KBJMqBTsPTsJKrMoE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/image/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"image",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_teacher_profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJiNzE1MmE2ZGFjZDQ0ODkwNGI4OTMiLCJpYXQiOjE3MDY3ODQ0NTIsImV4cCI6MTcwNzQ3NTY1Mn0.HE2sfOQd5oXksQPm2sKsayfiq3ls4zcoGSSIz6Wa-Cs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"subject\": [\"Math\", \"science\"],\r\n   \"post\": [\"Math\", \"science\"],\r\n   \"category\": [\"Math\", \"science\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/update-profile/65bb62dacbb3cdc6b06b6ece",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"update-profile",
+								"65bb62dacbb3cdc6b06b6ece"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_teacher_profile",
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "header",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDYwODk4MDMsImV4cCI6MTcwNjc4MTAwM30.BJtVSJqRpLR82uOnTmKwyZBV-1CjoGj8kJcyWQ8MFpM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/delete-profile/65bb4b2690e2eb6be1a75437",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"delete-profile",
+								"65bb4b2690e2eb6be1a75437"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_teachers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxZWNmYzM2NGU1YWE5OGE3ZDZjNTUiLCJpYXQiOjE3MDY1MDk0NTgsImV4cCI6MTcwNzIwMDY1OH0.oK3Khz1uk_jFZzkt1YFQ3aWu08TEKYKJsn0g45YBY-Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/all-teachers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								"all-teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_teacher_after_login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/teacher/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"teacher",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "post_event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDYwODk4MDMsImV4cCI6MTcwNjc4MTAwM30.BJtVSJqRpLR82uOnTmKwyZBV-1CjoGj8kJcyWQ8MFpM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "New event",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2024-02-12",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-02-14",
+									"type": "text"
+								},
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/contactus.jpeg"
+								},
+								{
+									"key": "pdfFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/res.pdf"
+								},
+								{
+									"key": "description",
+									"value": "Postman",
+									"type": "text"
+								},
+								{
+									"key": "startTime",
+									"value": "22:20",
+									"type": "text"
+								},
+								{
+									"key": "endTime",
+									"value": "12:12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/events/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/events/all-events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"all-events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_single_event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/events/65b7ad64bcebee6967d6a5f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"65b7ad64bcebee6967d6a5f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_Event",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDYwODk4MDMsImV4cCI6MTcwNjc4MTAwM30.BJtVSJqRpLR82uOnTmKwyZBV-1CjoGj8kJcyWQ8MFpM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/events/delete/65b0fa6c3316df41851188a6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"delete",
+								"65b0fa6c3316df41851188a6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload_files",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE4YzkxODc4ODE1MDFjNDMxNmVkNzkiLCJpYXQiOjE3MDYwODk4MDMsImV4cCI6MTcwNjc4MTAwM30.BJtVSJqRpLR82uOnTmKwyZBV-1CjoGj8kJcyWQ8MFpM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/ecommerce/client/public/images/a1.png"
+								},
+								{
+									"key": "pdfFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Documents/Exp.3.pdf"
+								},
+								{
+									"key": "title",
+									"value": "Song competition",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/events/upload/file/65afa95dd8ea7ec0fb0f0047",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"upload",
+								"file",
+								"65afa95dd8ea7ec0fb0f0047"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "homeWork",
+			"item": [
+				{
+					"name": "create_homework",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subject",
+									"value": "Mathematics",
+									"type": "text"
+								},
+								{
+									"key": "questions",
+									"value": "find the prime number between 1 to 100",
+									"type": "text"
+								},
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/a3.png"
+								},
+								{
+									"key": "pdfFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/consultAd.pdf"
+								},
+								{
+									"key": "presentClass",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/homework/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"homework",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_homework",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/homework/65b8bd0dacaddee11d1af979",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"homework",
+								"65b8bd0dacaddee11d1af979"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_homework",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/homework/delete/65b8bb0e9e1c5861f520a5c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"homework",
+								"delete",
+								"65b8bb0e9e1c5861f520a5c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_homework",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\":\"Math\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/homework/update/65b8bd0dacaddee11d1af979",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"homework",
+								"update",
+								"65b8bd0dacaddee11d1af979"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_all_sub_homework",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIyMDM1ZThiZDYyYzM3NGVmYWRkZjYiLCJpYXQiOjE3MDY2ODIyNTIsImV4cCI6MTcwNzM3MzQ1Mn0.KxJIcxH-p4WbUVOa86ktV548_LVXAfAgjDLduCjFaWU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subject",
+									"value": "Math",
+									"type": "text"
+								},
+								{
+									"key": "questions",
+									"value": "please write first 20 even no.",
+									"type": "text"
+								},
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/about.jpeg"
+								},
+								{
+									"key": "pdfFile",
+									"type": "file",
+									"src": "/C:/Users/hitech/OneDrive/Desktop/images/consultAd.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/homework/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"homework",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_subjec_wise",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/homework/subject/math/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"homework",
+								"subject",
+								"math",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign_homework",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentClass\":10,\r\n    \"homeworkId\":\"65b9e7a32ec12adc3f78264d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/homework/assign/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"homework",
+								"assign",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "attendance",
+			"item": [
+				{
+					"name": "post_attendance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"group\": \"sopaan\",\r\n  \"date\": \"2024-12-12\",\r\n  \"presentStudents\": 1\r\n \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/student/attendance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								"attendance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_attendance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/student/attendance/shikhar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								"attendance",
+								"shikhar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_attedance",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete_attendance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n     \"date\":\"2023-11-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/student/delete-attendance/Arambh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								"delete-attendance",
+								"Arambh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_attendance",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2024-09-30\",\r\n    \"presentStudents\":1200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/student/update-attendance/shikhar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								"update-attendance",
+								"shikhar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_attendance_with_date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2023-11-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/student/attendance-datewise/Neev",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								"attendance-datewise",
+								"Neev"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/student/delete-group/neev",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								"delete-group",
+								"neev"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
