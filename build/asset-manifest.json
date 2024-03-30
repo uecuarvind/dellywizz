@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/delywizz-software-solution/static/css/main.135c97aa.css",
+    "main.js": "/delywizz-software-solution/static/js/main.c75c6e6c.js",
+    "static/js/787.695e2242.chunk.js": "/delywizz-software-solution/static/js/787.695e2242.chunk.js",
+    "static/media/logo.png": "/delywizz-software-solution/static/media/logo.31a5153450dc1994929b.png",
+    "static/media/w3.png": "/delywizz-software-solution/static/media/w3.4fb05c3e0e3970cea42a.png",
+    "static/media/contactus.jpeg": "/delywizz-software-solution/static/media/contactus.02813507a63dda10c6d7.jpeg",
+    "static/media/about.jpeg": "/delywizz-software-solution/static/media/about.8fcc66508414b6b0e1fb.jpeg",
+    "static/media/javaScript.png": "/delywizz-software-solution/static/media/javaScript.7f8751632b42a9932c15.png",
+    "static/media/typescript.avif": "/delywizz-software-solution/static/media/typescript.4932dc15d4244b900688.avif",
+    "index.html": "/delywizz-software-solution/index.html",
+    "main.135c97aa.css.map": "/delywizz-software-solution/static/css/main.135c97aa.css.map",
+    "main.c75c6e6c.js.map": "/delywizz-software-solution/static/js/main.c75c6e6c.js.map",
+    "787.695e2242.chunk.js.map": "/delywizz-software-solution/static/js/787.695e2242.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.135c97aa.css",
+    "static/js/main.c75c6e6c.js"
+  ]
+}
